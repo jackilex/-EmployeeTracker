@@ -30,13 +30,13 @@ connection.connect(function(err) {
             type:'list',
             name: 'whattodo',
             message: `What would you like to do`,
-            choices:['view tables','Add employee','Remove emplyee department or role','update']
+            choices:['view tables','Add employees, roles or departments','Remove emplyee department or role','update']
           }
     ]).then(answers=>{
     if(answers.whattodo=='view tables'){
     views()
     };
-    if(answers.whattodo=='Add employee'){
+    if(answers.whattodo=='Add employees, roles or departments'){
         addDatas()
     };
     if(answers.whattodo=='Remove emplyee department or role'){
@@ -284,8 +284,9 @@ function viewDepartment(){
     connection.query(sql,function (error, res){
         if (error) throw error;
         console.table(res)
+        runProgram()
       })
-      runProgram()
+      
 };
 //------------------//
 //deleting data
@@ -306,7 +307,10 @@ function deleteData(){
     if(answers.whattodelete=='remove a department'){
         removeDepartment()
     };
-
+    if(answers.whattodelete=='remove a role'){
+        removeRole()
+    };
+    
     
     })
 }
@@ -361,7 +365,7 @@ function removeDepartment(){
             choices: roles
           }
         ]).then(answers=>{
-            let sql=`DELETE FROM department WHERE name="${answers.role}"`;
+            let sql=`DELETE FROM role WHERE title="${answers.role}"`;
             connection.query(sql,function (error, res){
                 if (error) throw error;
                 console.log(`deleted "${answers.role}"`)
