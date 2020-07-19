@@ -29,6 +29,13 @@ So that I can organize and plan my business 1) download/clone this package 2) ru
 ## How To Use
 follow promps from command line to add, remove and update
 
+see videos for more
+ https://drive.google.com/file/d/1952YTz1LFvCttyiuyYZzSacERqXQzczQ/view
+ https://drive.google.com/file/d/1Sw3d5sHP5DO14168PzsNeyi5mR1N3Seu/view
+ https://drive.google.com/file/d/1x0lg1D5iY9P_zweKzq8aX9j-6apeK9Ex/view
+ https://drive.google.com/file/d/1xHZXjWhYu_r2j9pAnhKNKjsRHXbD7gtt/view
+ 
+
 [Back To The Top](#read-me-template)
 
 ---
